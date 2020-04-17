@@ -1,4 +1,81 @@
-/* ----------------------------- section header ----------------------------- */
-ul{
-    background-color: orange;
+/* --------- section header --------- */
+.header{
+    background-color: $negro;
+
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+    &__logo{
+        width: 5rem;
+    }
+
+    &__list{
+        display: flex;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+    &__list li{
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    &__list li a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-family: 'neoterico';
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        padding: 1.2rem 3rem;
+    }
+
+    &__hamburguer-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__bar{
+        width: 2.5rem;
+        height: 0.25rem;
+        background-color: white;
+        display: inline-block;
+        position: relative;
+            &::after{
+            content: '';
+            width: 2.5rem;
+            height: 0.25rem;
+            position: absolute;
+            top: .8rem;
+            background-color: white;
+            }
+            &::before{
+                content: '';
+                width: 2.5rem;
+                height: 0.25rem;
+                position: absolute;
+                top: -.8rem;
+                background-color: white;
+                }
+    }
+
+    &__name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4rem;
+    }
+    &__portada{
+        p{
+            font-family: $font;
+            color: $gris;
+            font-size: 1.25rem;
+            text-align: right;
+            letter-spacing: 3px;
+        }
+    }
 }

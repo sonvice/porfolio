@@ -1,0 +1,28 @@
+@font-face{
+    src: url("../fonts/NEOTERIC© - Bold DEMO VERSION.ttf");
+    font-family: 'neoterico';
+}
+
+.container{
+    width: calc(100% - 10rem);
+    max-width: 71.5rem;
+    margin: 0 auto;
+    }
+//El carácter ^ indica que este selector debe seleccionar los elementos <div> sólo si tienen la cadena 'col-' al comienzo del valor del atributo 'class'.
+//https://www.w3.org/community/webed/wiki/Es/Selectores_avanzados_de_CSS
+
+div[class^="col-"]{
+    padding: 1rem 0
+    }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+$columns: 12;
+
+@for $i from 1 through $columns{
+    .col-#{$i}{
+        flex: 0 0 100% / $columns * $i}
+    .col-offset-#{$i}{
+        margin-left: 100% / $columns * $i}
+}
