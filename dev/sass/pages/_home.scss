@@ -1,6 +1,40 @@
 /* --------- section header --------- */
 .header{
     background-color: $negro;
+    position: relative;
+    height: 100vh;
+    &__float-menu{
+        transform: translateX(-100%);
+        position: fixed;
+        width: 100%;
+        background:$rojo;
+        height: 100vh;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; 
+        transition: .3s all;
+        li a{
+            display: block;
+            font-size: 2rem;
+            text-decoration: none;
+            color: white;
+            font-family: 'neoterico';
+            padding: 2rem;
+            @include md{
+                font-size: 3rem;
+            }
+        }
+        span.header__bar{
+            position: absolute;
+            right: 24px;
+            top: 43px;
+        }
+    }
+    .active{
+        transform: translateX(0); 
+    }
 
     &__nav{
         display: flex;
@@ -16,12 +50,22 @@
         width: 70%;
         justify-content: center;
         align-items: center;
+        display: none;
+        @include md{
+            display: block;
+            text-align: center;
+        }
     }
     &__list li{
-        height: 100%;
         text-align: center;
         display: flex;
         align-items: center;
+        margin: 2rem 0;
+        width: 100%;
+        @include md{
+            width: auto;
+            display:inline-block;
+        }
     }
     &__list li a{
         display: block;
@@ -31,12 +75,21 @@
         letter-spacing: 0.1875rem;
         text-transform: uppercase;
         padding: 1.2rem 3rem;
+        width: 100%;
+        @include md{
+            padding: 1.2rem 1rem;
+            width: auto;
+        }
+        @include lg{
+            padding: 1.2rem 2rem;
+        }
     }
 
     &__hamburguer-menu{
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 100;
     }
 
     &__bar{
@@ -45,6 +98,7 @@
         background-color: white;
         display: inline-block;
         position: relative;
+        transition: .3s all;
             &::after{
             content: '';
             width: 2.5rem;
@@ -52,6 +106,7 @@
             position: absolute;
             top: .8rem;
             background-color: white;
+            transition: .3s all;
             }
             &::before{
                 content: '';
@@ -60,22 +115,64 @@
                 position: absolute;
                 top: -.8rem;
                 background-color: white;
+                transition: .3s all;
                 }
+    }
+    &__bar.toggle{
+       background: rgba(0, 0, 0, 0);
+    }
+
+    &__bar.toggle::before{
+        transform: rotate(135deg);
+        top: 0;
+    }
+    &__bar.toggle::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    &__name-wilson img,&__portada img{
+        width:100%;
+    }
+    &__name-wilson{
+        width: 7.5rem;
+        position: absolute;
+        top: 0;
+        @include md {
+            width: 14.5rem;
+        }
     }
 
     &__name{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 4rem;
+        position: relative;
+        margin: 30px 0 0 0;
+        @include md {
+        }
     }
     &__portada{
+        width: 18.75rem;
+        position: absolute;
+        right: 0;
+        top: 190px;
+        @include md {
+            width: 30.75rem;
+        }
+        @include lg {
+            width: 40.75rem;
+        }
         p{
             font-family: $font;
             color: $gris;
-            font-size: 1.25rem;
+            font-size: 1rem;
             text-align: right;
             letter-spacing: 3px;
+            padding: 1rem 0 ;
+            @include md {
+                font-size: 1.5rem;
+            } 
         }
     }
 }

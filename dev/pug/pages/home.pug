@@ -1,5 +1,9 @@
 //- -------- secction header ------- -//
 header.header
+    ul.header__float-menu
+                each val in ["Home", "About", "Porfolio", "Contact"]
+                    li
+                        a(href="")=val
     .container
         nav.header__nav
             img.header__logo(src="images/logo-wilson.svg", alt="")

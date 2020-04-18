@@ -3,11 +3,16 @@
     font-family: 'neoterico';
 }
 
+
 .container{
     width: calc(100% - 10rem);
     max-width: 71.5rem;
     margin: 0 auto;
+    @media(max-width: 769px){
+        width: calc(100% - 3rem);  
     }
+    }
+
 //El carácter ^ indica que este selector debe seleccionar los elementos <div> sólo si tienen la cadena 'col-' al comienzo del valor del atributo 'class'.
 //https://www.w3.org/community/webed/wiki/Es/Selectores_avanzados_de_CSS
 
