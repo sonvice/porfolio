@@ -2,7 +2,6 @@
 .header{
     background-color: $negro;
     position: relative;
-    height: 100vh;
     &__float-menu{
         transform: translateX(-100%);
         position: fixed;
@@ -136,7 +135,6 @@
     }
     &__name-wilson{
         width: 7.5rem;
-        position: absolute;
         top: 0;
         @include md {
             width: 14.5rem;
@@ -154,7 +152,6 @@
     }
     &__portada{
         width: 18.75rem;
-        position: absolute;
         right: 0;
         top: 190px;
         @include md {
@@ -170,8 +167,14 @@
             text-align: right;
             letter-spacing: 3px;
             padding: 1rem 0 ;
+            span{
+                display: none;
+            }
             @include md {
                 font-size: 1.5rem;
+                span{
+                    display: inline-block;
+                }
             } 
         }
     }

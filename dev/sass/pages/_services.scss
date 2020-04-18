@@ -1,0 +1,38 @@
+.services{
+    background-color: $negro;
+    padding: 2rem 0;
+
+    .row{
+        justify-content: center;
+        font-family: $font;
+    }
+    &__card-description{
+        font-size: 1rem;
+        color: $gris;
+        text-align: center;
+        padding: 0.5rem 0 ;
+        @include md{
+            font-size: 1.2rem;
+        }
+    
+    }
+    &__card-title{
+        font-size: 2rem;
+        color: $gris;
+        text-align: center;
+    }
+
+    &__card{
+            @include md{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: center;
+        }
+        img{
+            width: 180px;
+            height: 100px;
+            object-fit: contain;
+        }
+    }
+}
