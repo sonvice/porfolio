@@ -53,6 +53,16 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-color: #2A2625;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #C8C8C7;
+  font-family: "neoterico";
+}
+
 @font-face {
   src: url("../fonts/NEOTERIC© - Bold DEMO VERSION.ttf");
   font-family: 'neoterico';
@@ -441,4 +451,94 @@ div[class^="col-"] {
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.about {
+  font-family: sans-serif;
+}
+
+.about__title {
+  text-align: center;
+}
+
+.about__img {
+  width: 315px;
+}
+
+.about__img img {
+  width: 100%;
+}
+
+.about__skills {
+  color: #C8C8C7;
+}
+
+.about__skills h3 {
+  font-size: 1.5rem;
+  padding: .5rem 0;
+}
+
+.about__skills p {
+  font-size: 1.2rem;
+}
+
+.about__experience {
+  text-align: start;
+  letter-spacing: 1px;
+}
+
+.about__progress {
+  width: 100%;
+  height: 1rem;
+  background-color: #C8C8C7;
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.about__progress :first-child {
+  position: absolute;
+  top: -1.2rem;
+  color: #C8C8C7;
+  text-transform: uppercase;
+}
+
+.about__progress :nth-child(2) {
+  position: absolute;
+  top: -20px;
+  color: #C8C8C7;
+  opacity: 0;
+  transition: 2s all;
+}
+
+.about__progress-done {
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  background-color: #AD343E;
+  transition: 1.5s ease;
+}
+
+.title-section {
+  position: relative;
+  display: inline-block;
+}
+
+.title-section::after {
+  content: '';
+  width: 80px;
+  height: 2px;
+  background-color: #AD343E;
+  position: absolute;
+  top: 16px;
+  right: -100px;
+}
+
+.title-section::before {
+  content: '';
+  width: 80px;
+  height: 2px;
+  background-color: #AD343E;
+  position: absolute;
+  top: 16px;
+  left: -100px;
 }
