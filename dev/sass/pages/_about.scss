@@ -5,10 +5,21 @@
         text-align: center;
     }
 
+    &__content{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex: 0 1 100%;
+        padding-top: 1rem;
+    }
+
     &__img{
-        width: 315px;
+        width: 100%;
         img{
             width: 100%;
+        }
+        @include md{
+            width: 80%;
         }
     }
     &__skills{
@@ -54,17 +65,16 @@
         background-color: $rojo;
         transition: 1.5s ease;
     }
+
 }
 
 
+.col-md{
+    @include md{
 
-
-
-
-
-
-
-
+        flex-basis: 50%;
+    }
+}
 
 .title-section{
     position: relative;

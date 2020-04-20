@@ -461,12 +461,26 @@ div[class^="col-"] {
   text-align: center;
 }
 
+.about__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 1 100%;
+  padding-top: 1rem;
+}
+
 .about__img {
-  width: 315px;
+  width: 100%;
 }
 
 .about__img img {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about__img {
+    width: 80%;
+  }
 }
 
 .about__skills {
@@ -516,6 +530,12 @@ div[class^="col-"] {
   opacity: 0;
   background-color: #AD343E;
   transition: 1.5s ease;
+}
+
+@media (min-width: 768px) {
+  .col-md {
+    flex-basis: 50%;
+  }
 }
 
 .title-section {
