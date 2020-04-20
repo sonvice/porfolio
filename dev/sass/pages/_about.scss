@@ -1,5 +1,6 @@
 
 .about{
+    padding-bottom: 4rem;
     font-family: sans-serif;
     &__title{
         text-align: center;
@@ -62,8 +63,8 @@
         height: 100%;
         width: 0;
         opacity: 0;
-        background-color: $rojo;
-        transition: 1.5s ease;
+        background: linear-gradient(270deg, rgba(36,0,0,1) 0%, rgba(173,52,48,1) 0%, rgba(42,38,37,1) 100%);
+        transition: 2.5s ease;
     }
 
 }
