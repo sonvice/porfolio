@@ -1,0 +1,28 @@
+section.contacto
+    .container
+        h2.title-section contacto
+        .contacto__form
+            .contacto__info
+                h3 información de contacto
+            .contacto__form-info 
+                h3 envía un mensaje
+                form(action="").contacto__inputs
+                    .contacto__camp
+                        input(type="text" required)
+                        label.contacto__label(for="")
+                            span nombre
+                    .contacto__camp
+                        input(type="tel" required)
+                        label.contacto__label(for="")
+                            span teléfono
+                    .contacto__camp
+                        input(type="email" maxlength="30" required)
+                        label.contacto__label(for="")
+                            span correo
+                    .contacto__camp-textarea
+                        textarea#mensaje(name="",rows="2", maxlength="65" required)
+                        label.contacto__label(for="")
+                            span mensaje
+                    .contacto__btn
+                        button enviar
+                    
