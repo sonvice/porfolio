@@ -4,7 +4,9 @@ let menu = document.querySelector('.header__hamburguer-menu').addEventListener('
     floatMenu.classList.toggle('active')
     barMenu.classList.toggle('toggle')
 })   
-//Progress bar animations
+
+/* ----- Progress bar animations ---- */
+
 let progres = document.querySelectorAll('.about__progress-done')
 let valor = document.querySelectorAll('.about__progress .val')
 let scroll = document.querySelector('#scroll')
@@ -34,6 +36,19 @@ function progressBar(entries){
 
 }
 
-
 let observer = new IntersectionObserver(progressBar, options);
     observer.observe(scroll)
+
+/* -------- SCROLL ANIMATIONS ------- */
+let nav = document.querySelector('.header__nav')
+window.addEventListener('scroll',addClassNav)
+
+function addClassNav(){
+
+    if(window.scrollY >10){
+        nav.classList.add('nav-active')
+    }else{
+        nav.classList.remove('nav-active')
+    }
+    console.log(window.scrollY)
+}

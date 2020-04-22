@@ -60,3 +60,17 @@ function progressBar(entries) {
 
 var observer = new IntersectionObserver(progressBar, options);
 observer.observe(scroll);
+/* -------- SCROLL ANIMATIONS ------- */
+
+var nav = document.querySelector('.header__nav');
+window.addEventListener('scroll', addClassNav);
+
+function addClassNav() {
+  if (window.scrollY > 10) {
+    nav.classList.add('nav-active');
+  } else {
+    nav.classList.remove('nav-active');
+  }
+
+  console.log(window.scrollY);
+}

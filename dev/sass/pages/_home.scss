@@ -2,6 +2,8 @@
 .header{
     background-color: $negro;
     position: relative;
+    margin-top: 10rem;
+
     &__float-menu{
         transform: translateX(-100%);
         position: fixed;
@@ -14,6 +16,7 @@
         flex-direction: column;
         align-items: center; 
         transition: .3s all;
+        top: 0;
         li a{
             display: block;
             font-size: 2rem;
@@ -36,9 +39,29 @@
     }
 
     &__nav{
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        transition: .5s;
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .nav-active{
+        background: $rojo;
+        box-shadow:
+        0 3.2px 2.8px rgba(0, 0, 0, 0.1),
+        0 7.8px 6.7px rgba(0, 0, 0, 0.072),
+        0 14.7px 12.5px rgba(0, 0, 0, 0.06),
+        0 26.1px 22.3px rgba(0, 0, 0, 0.051),
+        0 48.9px 41.8px rgba(0, 0, 0, 0.041),
+        0 117px 100px rgba(0, 0, 0, 0.029)
+        ;
+        transition: .5s;
+        padding: .5rem 0;
     }
     &__logo{
         width: 5rem;
@@ -59,7 +82,7 @@
         text-align: center;
         display: flex;
         align-items: center;
-        margin: 2rem 0;
+        margin: 1.5rem 0;
         width: 100%;
         @include md{
             width: auto;
