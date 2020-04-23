@@ -1,9 +1,12 @@
 //- -------- secction header ------- -//
 header.header
-    ul.header__float-menu
-                each val in ["Home", "About", "Porfolio", "Contact"]
-                    li
-                        a(href="")=val
+    .content-float-menu
+        ul.header__float-menu
+                    each val in ["Home", "About", "Porfolio", "Contact"]
+                        li
+                            a(href="")=val
+        span
+            span.header__bar
     
     nav.header__nav
         .container
@@ -13,7 +16,7 @@ header.header
                     li
                         a(href="")=val
             .header__hamburguer-menu
-                sapan.header__bar
+                span.header__bar
     .container
         .header__name
             .header__name-wilson

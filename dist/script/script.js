@@ -6,12 +6,19 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-var floatMenu = document.querySelector('.header__float-menu');
+var floatMenu = document.querySelector('.content-float-menu');
 var barMenu = document.querySelector('.header__bar');
 var menu = document.querySelector('.header__hamburguer-menu').addEventListener('click', function () {
   floatMenu.classList.toggle('active');
   barMenu.classList.toggle('toggle');
-}); //Progress bar animations
+});
+var menuFloat = document.querySelector('.content-float-menu > span').addEventListener('click', function () {
+  barMenu.classList.toggle('toggle');
+  setTimeout(function () {
+    floatMenu.classList.toggle('active');
+  }, 300);
+});
+/* ----- Progress bar animations ---- */
 
 var progres = document.querySelectorAll('.about__progress-done');
 var valor = document.querySelectorAll('.about__progress .val');
@@ -63,6 +70,7 @@ observer.observe(scroll);
 /* -------- SCROLL ANIMATIONS ------- */
 
 var nav = document.querySelector('.header__nav');
+var arrow = document.querySelector('.footer__arrow');
 window.addEventListener('scroll', addClassNav);
 
 function addClassNav() {
@@ -70,7 +78,29 @@ function addClassNav() {
     nav.classList.add('nav-active');
   } else {
     nav.classList.remove('nav-active');
+  } //arrow
+
+
+  if (window.scrollY > 600) {
+    arrow.classList.add('arrow-up');
+  } else {
+    arrow.classList.remove('arrow-up');
+  }
+}
+
+addEventListener('DOMContentLoaded', function () {
+  var btnUp = document.querySelector('.footer__arrow');
+
+  var scrollUp = function scrollUp() {
+    return document.documentElement.scrollTop || document.body.scrollTop;
+  };
+
+  function up() {
+    if (scrollUp() > 0) {
+      requestAnimationFrame(up);
+      scrollTo(0, scrollUp() - scrollUp() / 20);
+    }
   }
 
-  console.log(window.scrollY);
-}
+  btnUp.addEventListener('click', up);
+});

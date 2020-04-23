@@ -1,9 +1,17 @@
-let floatMenu = document.querySelector('.header__float-menu')
+let floatMenu = document.querySelector('.content-float-menu')
 let barMenu = document.querySelector('.header__bar')
 let menu = document.querySelector('.header__hamburguer-menu').addEventListener('click',()=>{
     floatMenu.classList.toggle('active')
     barMenu.classList.toggle('toggle')
+
 })   
+let menuFloat = document.querySelector('.content-float-menu > span').addEventListener('click',()=>{
+    barMenu.classList.toggle('toggle')
+    setTimeout(()=>{
+
+        floatMenu.classList.toggle('active')
+    },300)
+})
 
 /* ----- Progress bar animations ---- */
 
@@ -41,8 +49,8 @@ let observer = new IntersectionObserver(progressBar, options);
 
 /* -------- SCROLL ANIMATIONS ------- */
 let nav = document.querySelector('.header__nav')
+let arrow = document.querySelector('.footer__arrow')
 window.addEventListener('scroll',addClassNav)
-
 function addClassNav(){
 
     if(window.scrollY >10){
@@ -50,5 +58,24 @@ function addClassNav(){
     }else{
         nav.classList.remove('nav-active')
     }
-    console.log(window.scrollY)
+    //arrow
+    if(window.scrollY>600){
+        arrow.classList.add('arrow-up')
+    }else{
+        arrow.classList.remove('arrow-up')
+    }
 }
+
+addEventListener('DOMContentLoaded', ()=>{
+    
+    let btnUp = document.querySelector('.footer__arrow')
+    let scrollUp = () => document.documentElement.scrollTop || document.body.scrollTop
+    function up (){
+    
+        if(scrollUp() > 0){
+            requestAnimationFrame(up)
+            scrollTo(0, scrollUp() - (scrollUp() /20))
+        }
+    }
+    btnUp.addEventListener('click', up)
+})

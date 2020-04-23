@@ -193,19 +193,49 @@ div[class^="col-"] {
   margin-top: 10rem;
 }
 
-.header__float-menu {
-  transform: translateX(-100%);
-  position: fixed;
+.header .content-float-menu {
   width: 100%;
   background: #AD343E;
   height: 100vh;
-  z-index: 100;
+  transform: translateX(-100%);
+  transition: .5s all;
+  z-index: 105;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: .3s all;
-  top: 0;
+}
+
+.header .content-float-menu > span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #2a2625;
+  right: 20px;
+  position: absolute;
+  top: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  transform: scale(0.8);
+}
+
+@media (min-width: 768px) {
+  .header .content-float-menu > span {
+    top: 50px;
+    right: 50px;
+    transform: scale(1);
+  }
+}
+
+.header .content-float-menu span.header__bar {
+  position: absolute;
+  top: 28px;
+  left: 11px;
 }
 
 .header__float-menu li a {
@@ -215,12 +245,30 @@ div[class^="col-"] {
   color: white;
   font-family: 'neoterico';
   padding: 2rem;
+  text-align: center;
+  position: relative;
 }
 
 @media (min-width: 768px) {
   .header__float-menu li a {
     font-size: 3rem;
   }
+}
+
+.header__float-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+.header__float-menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  left: 0;
+  transform: scaleX(0);
+  transition: .3s all;
 }
 
 .header__float-menu span.header__bar {
@@ -297,6 +345,23 @@ div[class^="col-"] {
   text-transform: uppercase;
   padding: 1.2rem 3rem;
   width: 100%;
+  position: relative;
+}
+
+.header__list li a:hover::after {
+  transform: scaleX(1);
+}
+
+.header__list li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background: white;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: .3s all;
 }
 
 @media (min-width: 768px) {
@@ -317,6 +382,7 @@ div[class^="col-"] {
   justify-content: center;
   align-items: center;
   z-index: 100;
+  cursor: pointer;
 }
 
 .header__bar {
@@ -325,7 +391,7 @@ div[class^="col-"] {
   background-color: white;
   display: inline-block;
   position: relative;
-  transition: .3s all;
+  transition: .2s all;
 }
 
 .header__bar::after {
@@ -938,6 +1004,8 @@ div[class^="col-"] {
   font-size: 1.5rem;
   padding: 1rem;
   cursor: pointer;
+  visibility: hidden;
+  transition: 1s all;
   opacity: .5;
 }
 
@@ -952,4 +1020,8 @@ div[class^="col-"] {
     padding: 1rem;
     cursor: pointer;
   }
+}
+
+.footer .arrow-up {
+  visibility: visible;
 }
