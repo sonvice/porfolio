@@ -1,5 +1,9 @@
 .contacto{
     text-align: center;
+    background: url(../images/bg-contacto.svg) 155% 0%/40% no-repeat;
+    @include md{
+        background: url(../images/bg-contacto.svg) 130% 80%/30% no-repeat;
+    }
     &__form{
         border: 2px solid $gris;
         margin-top: 3rem;

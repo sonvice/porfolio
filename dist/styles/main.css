@@ -648,7 +648,19 @@ div[class^="col-"] {
 }
 
 .porfolio {
-  background: url(../images/bg-porfolio.svg) top right no-repeat;
+  background: url(../images/bg-porfolio.svg) 300% 2%/75% no-repeat, url(../images/bg-porfolio-2.svg) -3% 100% no-repeat;
+}
+
+@media (min-width: 768px) {
+  .porfolio {
+    background: url(../images/bg-porfolio.svg) 160% 3% no-repeat, url(../images/bg-porfolio-2.svg) -3% 100% no-repeat;
+  }
+}
+
+@media (min-width: 992px) {
+  .porfolio {
+    background: url(../images/bg-porfolio.svg) 120% 0% no-repeat, url(../images/bg-porfolio-2.svg) -3% 100% no-repeat;
+  }
 }
 
 .porfolio__link {
@@ -743,6 +755,13 @@ div[class^="col-"] {
 
 .contacto {
   text-align: center;
+  background: url(../images/bg-contacto.svg) 155% 0%/40% no-repeat;
+}
+
+@media (min-width: 768px) {
+  .contacto {
+    background: url(../images/bg-contacto.svg) 130% 80%/30% no-repeat;
+  }
 }
 
 .contacto__form {
