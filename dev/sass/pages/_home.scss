@@ -37,13 +37,9 @@
             }
         }
         span.header__bar{
-
             position: absolute;
             top: 28px;
             left: 11px;
-            @include md{
-    
-            }
         }
     }
     &__float-menu{
@@ -145,7 +141,7 @@
         padding: 1.2rem 3rem;
         width: 100%;
         position: relative;
-        &:hover::after{
+        &.a-active::after{
             transform: scaleX(1);
         }
         &::after{

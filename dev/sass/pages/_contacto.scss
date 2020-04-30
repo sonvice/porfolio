@@ -1,6 +1,7 @@
 .contacto{
     text-align: center;
     background: url(../images/bg-contacto.svg) 155% 0%/40% no-repeat;
+    padding-top: 6rem;
     @include md{
         background: url(../images/bg-contacto.svg) 130% 80%/30% no-repeat;
     }

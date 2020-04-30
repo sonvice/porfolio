@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="home">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,19 +11,19 @@
     <header class="header">
       <div class="content-float-menu">
         <ul class="header__float-menu">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Porfolio</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#home">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#porfolio">porfolio</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul><span><span class="header__bar"></span></span>
       </div>
       <nav class="header__nav">
         <div class="container"><img class="header__logo" src="images/logo-wilson.svg" alt=""/>
           <ul class="header__list">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Porfolio</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#porfolio">porfolio</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
           <div class="header__hamburguer-menu"><span class="header__bar"></span></div>
         </div>
@@ -64,7 +64,7 @@
     </section>
     <section class="about">
       <div class="container">
-        <div class="row">
+        <div class="row" id="about">
           <div class="col-12 about__title">
             <h2 class="title-section">about</h2>
           </div>
@@ -103,7 +103,7 @@
         </div>
       </div>
     </section>
-    <section class="porfolio">
+    <section class="porfolio" id="porfolio">
       <div class="container">
         <div class="porfolio__content">
           <h2 class="title-section">porfolio</h2>
@@ -118,7 +118,7 @@
         </div>
       </div>
     </section>
-    <section class="contacto">
+    <section class="contacto" id="contact">
       <div class="container">
         <h2 class="title-section">contacto</h2>
         <div class="contacto__form">
@@ -162,7 +162,6 @@
           </div>
         </div>
       </div>
-      <div class="footer__arrow"><i class="fas fa-chevron-circle-up"></i></div>
     </footer>
     <script src="script/script.js">    </script>
   </body>

@@ -2,9 +2,9 @@
 header.header
     .content-float-menu
         ul.header__float-menu
-                    each val in ["Home", "About", "Porfolio", "Contact"]
+                    each val in ["home", "about", "porfolio", "contact"]
                         li
-                            a(href="")=val
+                            a(href=`#${val}`)=val
         span
             span.header__bar
     
@@ -12,9 +12,9 @@ header.header
         .container
             img.header__logo(src="images/logo-wilson.svg", alt="")
             ul.header__list
-                each val in ["Home", "About", "Porfolio", "Contact"]
+                each val in ["home", "about", "porfolio", "contact"]
                     li
-                        a(href="")=val
+                        a(href=`#${val}`)=val
             .header__hamburguer-menu
                 span.header__bar
     .container

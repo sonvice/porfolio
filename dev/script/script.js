@@ -58,24 +58,50 @@ function addClassNav(){
     }else{
         nav.classList.remove('nav-active')
     }
-    //arrow
-    if(window.scrollY>600){
-        arrow.classList.add('arrow-up')
-    }else{
-        arrow.classList.remove('arrow-up')
-    }
+    // //arrow
+    // if(window.scrollY>600){
+    //     arrow.classList.add('arrow-up')
+    // }else{
+    //     arrow.classList.remove('arrow-up')
+    // }
 }
 
-addEventListener('DOMContentLoaded', ()=>{
+// addEventListener('DOMContentLoaded', ()=>{
     
-    let btnUp = document.querySelector('.footer__arrow')
-    let scrollUp = () => document.documentElement.scrollTop || document.body.scrollTop
-    function up (){
+//     let btnUp = document.querySelector('.footer__arrow')
+//     let scrollUp = () => document.documentElement.scrollTop || document.body.scrollTop
+//     function up (){
     
-        if(scrollUp() > 0){
-            requestAnimationFrame(up)
-            scrollTo(0, scrollUp() - (scrollUp() /20))
-        }
-    }
-    btnUp.addEventListener('click', up)
+//         if(scrollUp() > 0){
+//             requestAnimationFrame(up)
+//             scrollTo(0, scrollUp() - (scrollUp() / 20))
+//         }
+//     }
+//     btnUp.addEventListener('click', up)
+// })
+
+//MENU ACTIVE
+let list1 = document.querySelector('.header__list li a')
+let list = document.querySelector('.header__list')
+if(list1.textContent == 'home'){
+    list1.classList.add('a-active')
+}
+let headerActive = document.querySelectorAll('.header__list li a')
+    headerActive.forEach((hActive)=>{
+            hActive.addEventListener('click',()=>{
+            list.querySelector('.a-active').classList.remove('a-active')
+            hActive.classList.add('a-active')
+    })
+
+
 })
+
+//MENU FLOAT
+let listFloat = document.querySelector('.content-float-menu')
+let itemsFloat = document.querySelectorAll('.header__float-menu li a')
+    itemsFloat.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            listFloat.classList.remove('active')
+        })
+    })
+

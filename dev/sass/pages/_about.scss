@@ -2,6 +2,9 @@
 .about{
     padding-bottom: 4rem;
     font-family: sans-serif;
+    & .row{
+        padding-top: 6rem;
+    }
     &__title{
         text-align: center;
     }

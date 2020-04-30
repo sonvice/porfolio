@@ -23,6 +23,7 @@
     }
 
     &__card{
+
             @include md{
             display: flex;
             flex-direction: column;
@@ -33,6 +34,27 @@
             width: 180px;
             height: 100px;
             object-fit: contain;
+            cursor: pointer;
         }
+    }
+    &__card-img:hover{
+        animation: 1s service 1;
+        transform-origin: top center;
+    }
+
+    @keyframes service {
+        20%{
+            transform: rotate(15deg);
+        }
+        40%{
+            transform: rotate(-10deg);
+        }
+        60%{
+            transform: rotate(5deg);
+        }
+        80%{
+            transform: rotate(-3deg);
+        }
+        
     }
 }

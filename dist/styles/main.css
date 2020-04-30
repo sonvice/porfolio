@@ -53,6 +53,10 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #2A2625;
 }
@@ -348,7 +352,7 @@ div[class^="col-"] {
   position: relative;
 }
 
-.header__list li a:hover::after {
+.header__list li a.a-active::after {
   transform: scaleX(1);
 }
 
@@ -534,11 +538,52 @@ div[class^="col-"] {
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+  cursor: pointer;
+}
+
+.services__card-img:hover {
+  -webkit-animation: 1s service 1;
+          animation: 1s service 1;
+  transform-origin: top center;
+}
+
+@-webkit-keyframes service {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes service {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
 }
 
 .about {
   padding-bottom: 4rem;
   font-family: sans-serif;
+}
+
+.about .row {
+  padding-top: 6rem;
 }
 
 .about__title {
@@ -649,6 +694,7 @@ div[class^="col-"] {
 
 .porfolio {
   background: url(../images/bg-porfolio.svg) 300% 2%/75% no-repeat, url(../images/bg-porfolio-2.svg) -3% 100% no-repeat;
+  padding-top: 7.5rem;
 }
 
 @media (min-width: 768px) {
@@ -756,6 +802,7 @@ div[class^="col-"] {
 .contacto {
   text-align: center;
   background: url(../images/bg-contacto.svg) 155% 0%/40% no-repeat;
+  padding-top: 6rem;
 }
 
 @media (min-width: 768px) {
